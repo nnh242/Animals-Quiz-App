@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Animals Quiz</title>
+  <link href="./main.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Spectral" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/styles/metro/notify-metro.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="row">
+    <div class="col-12">
+      <header role="banner"><h1> What breed is this?</h1></header>
+    </div>
+  </div>
+  <main>
+    <div class="row" id="start">
+      <div class="col-9">  
+        <p id="greeting">Test your knowledge of these adorable breeds!</p>
+      </div>
+      <div class="row">
+        <div class="col-6"><br></div>
+          <div class="button col-3">
+              <input class="buttonplace" id="startQuizButton" type="button" value="Start Quiz">
+          </div>
+      </div> 
+    </div> 
+
+    <div class="row hidden" id="questions">
+      <div class="col-3"><br></div>
+      <img class="col-6" src="" alt="picture" id="pictures">
+      <form role="form" name="quizform" action="" method="post" id="quizForm">
+        <div class="row">
+          <div class="col-3"><br></div>
+          <div class ="col-6 answers">
+            <div class="row">
+              <input type ="radio" name="answer" class="option" id="option1"/><label for="option1"></label>
+            </div>
+            <div class="row">
+              <input type="radio" name="answer" class="option" id="option2"/><label for="option2"></label>
+            </div>
+             <div class="row">
+              <input type="radio" name="answer" class="option" id="option3"/><label for="option3"></label>
+            </div>
+            <div class="row">
+              <input type="radio" name="answer" class="option" id="option4"/><label for="option4"></label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6"><br></div>
+          <div class="button col-3" id="buffer">
+              <input class="buttonplace" type="submit" value="Next Question">
+          </div>
+        </div> 
+      </form>
+      <div class="foot row">
+        <footer role="footer" class="col-12">Question <span id="questionCount"></span> of 10</footer>
+      </div>
+    </div>
+    <div class="row hidden" id="results">
+      <div class="col-3"><br></div>
+      <img class="col-6" src="http://res.cloudinary.com/thcloud/image/upload/v1497998320/pexels-photo-230785_zijnet.jpg" id="pictures" alt="results">
+      <div class="row">
+        <div class="col-3"><br></div>
+        <div class="col-6">Your score: <span id="correctCount"></span> out of 10.</div>
+      <div class="row">
+        <div class="col-6"><br></div>
+        <div class="button col-3">
+          <input class="buttonplace" id="tryagain" type="button" value="Try Again">
+        </div>
+      </div> 
+      <div class="foot row">
+        <footer role="footer" class="col-12 hidden" id="allWrong">You got nothing right, but it's okay.</footer>
+        <footer role="footer" class="col-12 hidden" id="allRight">You got all answers right, so you may have all the toys.</footer>
+      </div>
+    </div>
+    </div>
+    </main>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"></script>
+<script src="./index.js"></script>
+</body>
+</html>
